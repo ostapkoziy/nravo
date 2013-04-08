@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12B19" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="loM-eK-EOt">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="Kyn-wq-CN1"/>
+                                </connections>
+                            </webView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V03-qo-e65"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="durak-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="1Hi-G8-8My"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1Hi-G8-8My" firstAttribute="centerX" secondItem="loM-eK-EOt" secondAttribute="centerX" type="default" id="5Fp-Ka-Ml9"/>
+                            <constraint firstItem="loM-eK-EOt" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="ADb-aa-Klr"/>
+                            <constraint firstItem="loM-eK-EOt" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="HWu-lI-k8P"/>
+                            <constraint firstItem="V03-qo-e65" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="P1n-Pd-Spz"/>
+                            <constraint firstItem="1Hi-G8-8My" firstAttribute="top" secondItem="3" secondAttribute="top" constant="134" id="SR7-Yi-yS2"/>
+                            <constraint firstItem="V03-qo-e65" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="UFJ-A7-C3V"/>
+                            <constraint firstItem="loM-eK-EOt" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="Ux5-Sd-r8a"/>
+                            <constraint firstItem="V03-qo-e65" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="Zb7-Vg-T3N"/>
+                            <constraint firstItem="loM-eK-EOt" firstAttribute="trailing" secondItem="V03-qo-e65" secondAttribute="trailing" type="default" id="jRM-VX-blQ"/>
+                            <constraint firstItem="loM-eK-EOt" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="nNS-2g-kj1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bgView" destination="V03-qo-e65" id="MEc-4I-VWo"/>
+                        <outlet property="gameLogo" destination="1Hi-G8-8My" id="hHM-gy-3WU"/>
+                        <outlet property="webView" destination="loM-eK-EOt" id="p3n-IR-mgU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="durak-logo.png" width="315" height="160"/>
+    </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="bgView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="gameLogo" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
